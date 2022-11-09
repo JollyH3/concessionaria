@@ -1,17 +1,15 @@
-let z = 0;
 function singIn(){
     let persons = JSON.parse(localStorage.getItem('persons'));
     if(persons === null){
-        persons = [];
+        persons = [{username: 'admin', password: 'admin'}];
     }else{
         let persons = JSON.parse(localStorage.getItem('persons'));
     }
     if (document.getElementById("password").value == document.getElementById("passwordConfirm").value) {
         const person = {
-            name: document.getElementById("name").value,
+            username: document.getElementById("username").value,
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
-            passwordConfirm: document.getElementById("passwordConfirm").value
         }
         persons.push(person);
         localStorage.setItem('persons', JSON.stringify(persons));
@@ -22,27 +20,29 @@ function singIn(){
 
 }
 
-function logIn(){
-    let username = document.getElementsByName('user')[0].value;
-    let password = document.getElementsByName('pw')[0].value;
-    let persons = JSON.parse(localStorage.getItem('persons'))
-    let check = false;
-
-    if (persons == null){
+function logIn() {
+    let persons = JSON.parse(localStorage.getItem('persons'));
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let found = false;
+    let z = 0;
+    if(persons === null){
         alert('No user found, sign in first');
+        persons = [{username: 'admin', password: 'admin'}];
     }else{
-        for (let i = 0; i < persons.length; i++){
-            if (username == persons[i].username && password == persons[i].password){
+        let persons = JSON.parse(localStorage.getItem('persons'));
+        for(let i = 0; i < persons.length; i++){
+            if(username == persons[i].username && password == persons[i].password) {
                 z = i
-                check = true
+                found = true;
             }
-        }
-        if (check == true){
-            alert('Welcome ' + persons[z].name + ' ' + persons[z].surname);
-            window.location.href = 'html/list.html';
-        }else{
-            alert('Wrong username or password');
+    }
+    if(found == true){
+        window.location.href = 'list.html';
+        alert('Welcome ' + persons[z].username);
+
+    }else {
+        alert('Wrong username or password');
         }
     }
-
 }
