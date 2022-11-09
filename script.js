@@ -1,3 +1,5 @@
+let z;
+let u;
 function singIn(){
     let persons = JSON.parse(localStorage.getItem('persons'));
     if(persons === null){
@@ -10,6 +12,7 @@ function singIn(){
             username: document.getElementById("username").value,
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
+            auto: []
         }
         persons.push(person);
         localStorage.setItem('persons', JSON.stringify(persons));
@@ -25,7 +28,7 @@ function logIn() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     let found = false;
-    let z = 0;
+
     if(persons === null){
         alert('No user found, sign in first');
         persons = [{username: 'admin', password: 'admin'}];
@@ -38,11 +41,37 @@ function logIn() {
             }
     }
     if(found == true){
-        window.location.href = 'list.html';
-        alert('Welcome ' + persons[z].username);
-
+        if (username === "admin" && password === "admin") {
+            window.location.href = 'admin.html';
+            alert("Admin logged in");
+        }else{
+            window.location.href = 'list.html';
+            alert('Welcome ' + persons[z].username);
+        }
     }else {
         alert('Wrong username or password');
         }
     }
+}
+
+function setPage(){
+    let persons = JSON.parse(localStorage.getItem('persons'));
+
+}
+
+function setPageAdmin(){
+    location.reload();
+    let persons = JSON.parse(localStorage.getItem('persons'));
+    let list = document.getElementById('list');
+    for (let i = 0; i < persons.length; i++) {
+        let li = document.createElement('li');
+        li.innerHTML = "<a href='info-User.html?name=" + persons[i].username + "'>" + persons[i].username + "</a>";
+        li.id = i;
+        list.appendChild(li);
+    }
+}
+
+function setPageInfo(){
+    let persons = JSON.parse(localStorage.getItem('persons'));
+    document.getElementById("id").innerHTML = persons[i].username;
 }
