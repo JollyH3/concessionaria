@@ -5,14 +5,23 @@
 }
 
 /*Top*/
-.header.a{
-    display: block;
+
+.home{
+    display: inline;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+.title{
+    display: inline;
+    text-align: center;
+
 }
 
-.header.h1{
-    display: block;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Lobster', cursive;
-    color: #000000;
+.settings {
+    display: inline;
+    position: fixed;
+    right: 10px;
+    top: 20px;
 }
+
