@@ -32,6 +32,11 @@ function newUser(){
 }
 
 function showUsers() {
+    //reset list
+    let list = document.getElementById("users");
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
     let users = JSON.parse(localStorage.getItem("users"));
     if (users == null) {
         users = [];
@@ -41,7 +46,7 @@ function showUsers() {
     } else {
         for (let i = 0; i < users.length; i++) {
             let li = document.createElement("li");
-            li.innerHTML = "<a href='html/infoUser.html?index=" + i + "'>" + users[i].name + "</a>";
+            li.innerHTML = "<a href='html/infoUser.html?index=" + i + "'>" + users[i].name + " " + users[i].surname + "</a>";
             document.getElementById("users").appendChild(li);
         }
     }
