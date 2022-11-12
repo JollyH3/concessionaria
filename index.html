@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <p><a href="index.html"></a></p>
+            <a href="index.html"><img src="images/content/home.png" alt="home"></a>
             <h1>Title</h1>
-            <p>options</p>
+            <a href="index.html"><img src="images/content/setting.png" alt="settings"></a>
         </div>
-        </div>
-            <ul>
-                <li>
-                    <a href="html/infoUser.html?nome=a">cico</a>
-                </li>
-            </ul>
-        <button>Aggiungi Utente</button>
-        <button>Elimina Utente</button>
         <div class="main">
+            <h3 onclick="showUsers()">show user</h3>
+            <ul id="users"></ul>
+            <button onclick="addUser()">Aggiungi Utente</button>
         </div>
         <div class="footer">
             <p>Sito realizzato da Jolly & Angy ;)</p>

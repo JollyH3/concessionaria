@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="script4newUser.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onpageshow="setPage()">
     <div class="container">
-        <div class="header"></div>
-        <div class="main"></div>
+        <div class="header">
+            <p><a href="../index.html">casa</a></p>
+            <h1 id="user"></h1>
+            <p><a href="">options</a></p>
+        </div>
+        <div class="main" id="p">
+            <p id="mail"></p>
+            <p id="country"></p>
+            <button onclick="addCarPage()">Add Car</button>
+            <button onclick="deleteUser()">Delete Users</button>
+            <h4>Cars</h4>
+            <ul id="cars"></ul>
+        </div>
         <div class="footer"></div>
     </div>
 </body>

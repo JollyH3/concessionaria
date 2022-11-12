@@ -1,0 +1,18 @@
+
+.container {
+    width: 1200px;
+    margin: 20px auto 20px auto;
+}
+
+/*Top*/
+.header.a{
+    display: block;
+}
+
+.header.h1{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+}
