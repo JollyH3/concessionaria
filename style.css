@@ -132,9 +132,8 @@
     }
     html{
         font-family:cursive;
+        background: rgb(131,58,180);
         background: linear-gradient(90deg, rgba(131,58,180,1) 5%, rgba(180,46,120,1) 40%, rgba(253,29,29,1) 60%, rgba(252,108,51,1) 80%, rgba(252,176,69,1) 100%);
-       
-        
     }
     
     .main{
@@ -192,20 +191,6 @@
     input{
         background: none;
         border-radius: 5px;
-    }
-
-    #sfondo1{
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(172,3,131,1) 0%, rgba(121,9,107,1) 38%, rgba(56,118,187,1) 73%, rgba(0,212,255,1) 100%);
-    }
-
-    #sfondo2{
-        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    
-    }
-
-    #sfondo3{
-        background: linear-gradient(to right, #f0c27b, #4b1248); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     }
     
     .footer{
