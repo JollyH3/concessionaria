@@ -1,4 +1,6 @@
-
+/*
+Verifico che la dimensione del browser sia maggiore di 501px
+ */
 @media screen and (min-width: 501px){
     .container {
         width: 1200px;
@@ -125,6 +127,9 @@
     }
 }
 
+/*
+Verifico che la dimensione del browser sia minore di 500px
+ */
 @media screen and (max-width: 500px) {
 
     .header{

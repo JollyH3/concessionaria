@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body onpageshow="setPage()">
+<!-- onpageshow mi permette di eseguire la funzione setPage() quando la pagina viene caricata -->
     <div class="container">
         <div class="header">
             <div class="header">
                 <div class="home">
+                    <!-- incona per tornare alla home  -->
                     <a href="../index.html"><img class="left" src="../images/content/home.png" alt="home"></a>
                 </div>
                 <div class="title">
+                    <!-- titolo della pagina -->
                     <h1 id="user">Title</h1>
                 </div>
                 <div class="settings">
+                    <!-- icona per andare alle impostazioni -->
                     <a href="index.html"><img class="right" src="../images/content/setting.png" alt="settings"></a>
                 </div>
             </div>
         </div>
         <div class="main" id="p">
+            <!-- informazioni sull'utente -->
             <p id="mail"></p>
             <p id="country"></p>
+            <!-- pulsante per eliminare l'utente e per aggiungere auto -->
             <button onclick="addCarPage()">Add Car</button>
             <button onclick="deleteUser()">Delete Users</button>
             <h4>Cars</h4>
+            <!-- lista delle auto dell'utente -->
             <ul id="cars"></ul>
         </div>
         <div class="footer"></div>
