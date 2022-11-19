@@ -93,6 +93,8 @@ Crea l'oggetto utente e lo riempie con i valori dell'input
  
  ```alert("User added")``` compare un avviso dove avvisa che l'utente è stato aggiunto
 
+# Script per le auto
+
 >[Script commentato](https://github.com/JollyH3/concessionaria/blob/main/codiceCommentato/script.js)
 Questo metodo mi permette di estrapolare dall'URL le informazioni che mi interessano, in questo caso nell URL passo l'indice dell array delle persone
 e l'indice del auto per sapere che persona è auto volgio
