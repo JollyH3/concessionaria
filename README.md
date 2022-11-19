@@ -84,14 +84,14 @@ Crea l'oggetto utente e lo riempie con i valori dell'input
     localStorage.setItem("users", JSON.stringify(users));
     alert("User added");
 ```
-users.push(user) inserisce nell'array di utenti l'oggetto utente creato in precedenza 
+```users.push(user)``` inserisce nell'array di utenti l'oggetto utente creato in precedenza 
 [metodo push](https://www.w3schools.com/jsref/jsref_push.asp)
 
-localStorage.setItem("users", JSON.stringify(users)) salva l'array nel [localStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
+```localStorage.setItem("users", JSON.stringify(users))``` salva l'array nel [localStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
 
- JSON.stringify(users) trasforma in stringa l'array per poterlo salvare [JSON.stringify](https://www.w3schools.com/js/js_json_stringify.asp)
+ ```JSON.stringify(users)``` trasforma in stringa l'array per poterlo salvare [JSON.stringify](https://www.w3schools.com/js/js_json_stringify.asp)
  
- alert("User added") compare un avviso dove avvisa che l'utente è stato aggiunto
+ ```alert("User added")``` compare un avviso dove avvisa che l'utente è stato aggiunto
 
 # Script per le auto
 
