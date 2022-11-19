@@ -93,9 +93,9 @@ Crea l'oggetto utente e lo riempie con i valori dell'input
  
  ```alert("User added")``` compare un avviso dove avvisa che l'utente è stato aggiunto
 
-# Script per le auto
-
 >[Script commentato](https://github.com/JollyH3/concessionaria/blob/main/codiceCommentato/script.js)
+Questo metodo mi permette di estrapolare dall'URL le informazioni che mi interessano, in questo caso nell URL passo l'indice dell array delle persone
+e l'indice del auto per sapere che persona è auto volgio
 ```js
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
@@ -104,5 +104,24 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 let index = params.index;
 let ncar = params.car;
 ```
+```new Proxy(target, handler)``` 
+
+Il proxy consente di creare un proxy per un altro oggetto, che puo prendere e ridefinire le operazioni fondamentali di quel oggetto [altre info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy?retiredLocale=it)
+
+target = L'oggetto originale che vuoi proxare 
+
+handler = Oggetto per definire quali operazioni vanno intercentate e come ridefinire le operazioni intercettate 
+
+```new URLSearchParams(options)```
+
+L' [URLSearchParams(options)](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams) costruttore crea e restituisce un nuovo [URLSearchParams()](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams) oggetto
+
+options = url che ci interessa 
+
+```window.location.search```
+
+Il [window.location.search](https://www.w3schools.com/jsref/prop_loc_search.asp) va a prendere la parte del url che inizia dal ?
 
 # Script per i nuovi utenti
+
+Script
