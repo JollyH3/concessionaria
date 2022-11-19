@@ -124,6 +124,20 @@ options = url che ci interessa
 
 Il [window.location.search](https://www.w3schools.com/jsref/prop_loc_search.asp) va a prendere la parte del url che inizia dal ?
 
+```get: (searchParams, prop) => searchParams.get(prop)```
+
+Questa funzione restituisce il valore del dato che ci interessa
+
+```get(target, property)```
+
+[get](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get) è un metodo per ottenere un valore di proprietà
+
+target = l'ogetto di destinazione
+
+property = il nome o simbolo della proprietà da ottenere
+
+
+
 # Script per i nuovi utenti
 
 Script
