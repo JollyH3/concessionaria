@@ -1,5 +1,6 @@
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=http%3A%2F%2Fconcessionariadejolly.works%2F)](http://concessionariadejolly.works/)
 ![Languages](https://img.shields.io/github/languages/count/JollyH3/concessionaria)
+[![CodeQuality](https://www.codefactor.io/repository/github/jollyh3/concessionaria/badge)](https://www.codefactor.io/repository/github/jollyh3/concessionaria)
 # concessionaria
 Sito che mi permette di gestire le auto degli utenti
 
