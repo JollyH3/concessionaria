@@ -20,6 +20,9 @@ Qui potete trovare tutta la documentazione e la spiegazione degli script, in alt
 
 # Script base
 
+>Script per tutte le funzionalità dell'index
+
+### Funzione addUser()
 >Questa funzione reinderizza il browser ad un altra pagina html
 ```js
     function addUser() {
@@ -93,6 +96,75 @@ Crea l'oggetto utente e lo riempie con i valori dell'input
  
  ```alert("User added")``` compare un avviso dove avvisa che l'utente è stato aggiunto
 
+### Funzione showUsers()
+
+>Questa funzione va a mostrare tutti gli utenti che ci sono nell'array
+
+```js
+    function showUsers() {
+    //reset list
+    let list = document.getElementById("users");
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
+    let users = JSON.parse(localStorage.getItem("users"));
+    if (users == null) {
+        users = [];
+        let li = document.createElement("li");
+        li.innerHTML = "No users to show";
+        document.getElementById("users").appendChild(li);
+    } else {
+        for (let i = 0; i < users.length; i++) {
+            let li = document.createElement("li");
+            li.innerHTML = "<a href='html/infoUser.html?index=" + i + "'>" + users[i].name + " " + users[i].surname + "</a>";
+            document.getElementById("users").appendChild(li);
+        }
+    }    
+}
+```
+
+```
+let list = document.getElementById("users");
+```
+
+Vado a salvare in una variabile il tag lista
+
+```
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
+```
+
+[list.firstChild](https://www.w3schools.com/jsref/prop_node_firstchild.asp) restituisce il primo figlio del nodo (lista)
+
+[list.removeChild(list.firstChild)](https://www.w3schools.com/jsref/met_node_removechild.asp) rimuove il primo figlio del nodo (lista)
+
+>Come fa a funzionare questo ciclo?
+>Questo cuclo funziona grazie hai [valori booleani di js](https://www.w3schools.com/js/js_booleans.asp), in questo caso [list.firstChild](https://www.w3schools.com/jsref/prop_node_firstchild.asp) ci restituisce il primo figlio quindi è come se ci fosse un valore, mentre quando non ci saranno più figli restituira Null quindi False
+
+```let users = JSON.parse(localStorage.getItem("users"));```
+
+[getItem](https://www.w3schools.com/jsref/met_storage_getitem.asp) restituisce l'elemento specifiacato, in questo caso l'array di utenti
+
+[JSON.parse](https://www.w3schools.com/js/js_json_parse.asp) va a trasformare da JSON (stringa) a linguaggio js
+
+```if (users == null) users = [];``` Se l'array di utenti non esiste vado a inizializzare un array di utenti vuoto
+
+```let li = document.createElement("li");``` [Creo l'elemento](https://www.w3schools.com/jsref/met_document_createelement.asp) li e lo salvo in una variabile
+
+```li.innerHTML = "No users to show";``` Vado a scrivere all'interno del TAG "no users to show"
+
+```document.getElementById("users").appendChild(li);``` [appendChild()](https://www.w3schools.com/jsref/met_node_appendchild.asp) va ad aggiungere ad un nodo (lista) come ultimo figlio di un nodo
+
+```
+else {
+        for (let i = 0; i < users.length; i++) {
+            let li = document.createElement("li");
+            li.innerHTML = "<a href='html/infoUser.html?index=" + i + "'>" + users[i].name + " " + users[i].surname + "</a>";
+            document.getElementById("users").appendChild(li);
+        }
+```
+
 # Script per le auto
 
 >[Script commentato](https://github.com/JollyH3/concessionaria/blob/main/codiceCommentato/script.js)
@@ -135,6 +207,13 @@ Questa funzione restituisce il valore del dato che ci interessa
 target = l'ogetto di destinazione
 
 property = il nome o simbolo della proprietà da ottenere
+
+[=>](https://www.w3schools.com/js/js_arrow_function.asp) La funzione freccia ci consente di scrivere una sintassi della funzione più breve
+
+```params.index```
+
+params è l'oggetto proxy, index è il nome del dato che volgio ricevere
+
 
 
 
